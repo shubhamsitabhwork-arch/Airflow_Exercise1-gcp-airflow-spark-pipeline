@@ -1,0 +1,24 @@
+# Python / Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+.env
+
+# Apache Airflow & Spark
+airflow-webserver.pid
+airflow.db
+logs/
+spark-warehouse/
+metastore_db/
+
+# Google Cloud / Security (Never push keys!)
+*.json
+*.pem
+secrets/
+
+# IDEs and Editors
+.vscode/
+.idea/
+.DS_Store
