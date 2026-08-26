@@ -13,7 +13,7 @@ The pipeline consists of three main steps managed by Airflow:
 <img width="4980" height="3888" alt="image" src="https://github.com/user-attachments/assets/43eed792-7658-4b5c-9576-d21e5277297c" />
 
 
-📁 Project Structure
+## 📁 Project Structure
 airflow_spark_job.py: Airflow DAG definition for cluster management and job submission.
 
 emp_batch_job.py: PySpark script containing the ETL logic.
@@ -22,8 +22,8 @@ employee.csv: Source data containing employee details.
 
 department.csv: Source data containing department mapping.
 
-🚀 Setup and Deployment
-GCP Requirements:
+## 🚀 Setup and Deployment
+**GCP Requirements:**
 
 A GCP Project with billing enabled.
 
@@ -31,7 +31,7 @@ APIs enabled: Cloud Dataproc API, Cloud Storage API.
 
 A Service Account with Dataproc Worker and Storage Object Admin permissions.
 
-Deployment Steps:
+**Deployment Steps:**
 
 Upload employee.csv and department.csv to your GCS bucket: gs://airflow-projetcs-gds-dev/airflow-project-1/data/.
 
@@ -39,7 +39,7 @@ Upload emp_batch_job.py to gs://airflow-projetcs-gds-dev/airflow-project-1/spark
 
 Place airflow_spark_job.py in your Airflow dags/ folder.
 
-Execution:
+**Execution:**
 
 Navigate to your Airflow UI.
 
