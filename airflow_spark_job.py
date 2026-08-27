@@ -1,5 +1,7 @@
 from datetime import datetime, timedelta
 from airflow import DAG
+
+#dataproc related operators 
 from airflow.providers.google.cloud.operators.dataproc import (
     DataprocCreateClusterOperator,
     DataprocSubmitJobOperator,
@@ -28,7 +30,7 @@ dag = DAG(
 
 # Define cluster config
 CLUSTER_NAME = 'dataproc-spark-airflow-demo'
-PROJECT_ID = 'dev-sunset-468907-e9'
+PROJECT_ID = 'project-d1694a9a-9dde-4e3c-974'
 REGION = 'us-central1'
 CLUSTER_CONFIG = {
     'master_config': {
@@ -65,7 +67,7 @@ PYSPARK_JOB = {
     "reference": {"project_id": PROJECT_ID},
     "placement": {"cluster_name": CLUSTER_NAME},
     "pyspark_job": {
-        "main_python_file_uri": "gs://airflow-projetcs-gds-dev/airflow-project-1/spark-job/emp_batch_job.py"
+        "main_python_file_uri": "gs://airflow-test-projects-gds-dev/airflow-project-1/spark-job/emp_batch_job.py"
         },
 }
 

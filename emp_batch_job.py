@@ -4,7 +4,7 @@ def process_data():
     spark = SparkSession.builder.appName("GCPDataprocJob").getOrCreate()
 
     # Define your GCS bucket and paths
-    bucket = "airflow-projetcs-gds-dev"
+    bucket = "airflow-test-projects-gds-dev"
     emp_data_path = f"gs://{bucket}/airflow-project-1/data/employee.csv"
     dept_data_path = f"gs://{bucket}/airflow-project-1/data/department.csv"
     output_path = f"gs://{bucket}/airflow-project-1/output"
