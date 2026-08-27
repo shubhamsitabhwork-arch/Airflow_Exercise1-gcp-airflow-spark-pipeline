@@ -22,3 +22,8 @@ secrets/
 .vscode/
 .idea/
 .DS_Store
+
+# Ignore local video recordings
+03_Recordings/
+*.mp4
+*.mkv
